@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="smgs" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myfillbill.controllers.SmgsController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefWidth="210.0" spacing="6.0">
+               <children>
+                  <Button fx:id="readSmgsButton" mnemonicParsing="false" prefWidth="200.0" text="Read SMGS" />
+                  <Button layoutX="10.0" layoutY="50.0" mnemonicParsing="false" prefWidth="200.0" text="Button" />
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+            <ScrollPane hmin="10.0" pannable="true">
+               <content>
+                  <VBox alignment="CENTER" prefWidth="1200.0" spacing="8.0">
+                     <children>
+                        <Label fx:id="label" text="Welcome!" />
+                        <Button fx:id="button" mnemonicParsing="false" text="button.text" />
+                        <HBox spacing="25.0">
+                           <children>
+                              <VBox maxHeight="200.0" prefWidth="400.0">
+                                 <children>
+                                    <Label text="Номер" />
+                                    <TextField id="RegNum" />
+                                    <HBox spacing="4.0">
+                                       <children>
+                                          <VBox prefWidth="400.0">
+                                             <children>
+                                                <Label text="Ст. Отправления" />
+                                                <TextField id="DepStationName" />
+                                             </children>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Код" />
+                                                <TextField id="DepStationCode" minWidth="55.0" prefWidth="55.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="4.0">
+                                       <children>
+                                          <VBox prefWidth="400.0">
+                                             <children>
+                                                <Label text="Ст. Назначения" />
+                                                <TextField id="DestStationName" />
+                                             </children>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Код" />
+                                                <TextField id="DestStationCode" minWidth="55.0" prefWidth="55.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Вагон" />
+                                                <TextField id="CarriageId" prefWidth="300.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <Label text="Общий вес" />
+                                                <TextField id="GoodsWeight" minWidth="100.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="2.0">
+                                       <children>
+                                          <VBox layoutX="256.0" layoutY="10.0">
+                                             <children>
+                                                <Label text="Контейнер" />
+                                                <TextField id="ContainerID" prefWidth="280.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="22.0" layoutY="10.0">
+                                             <children>
+                                                <Label text="Тип" />
+                                                <TextField id="ContainerModeDescription" minWidth="40.0" prefWidth="40.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="226.0" layoutY="10.0">
+                                             <children>
+                                                <Label text="Грузопод." />
+                                                <TextField id="ContainerCapacity" alignment="CENTER" minWidth="40.0" prefWidth="40.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Контракт" />
+                                          <TextField id="G2" minWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <HBox spacing="6.0">
+                                 <children>
+                                    <VBox prefWidth="350.0" spacing="2.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="350.0" text="ПОЛУЧАТЕЛЬ" textFill="#fc0000">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox spacing="2.0">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Имя" />
+                                                      <TextField id="Consignee_Name" prefWidth="290.0" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefWidth="60.0">
+                                                   <children>
+                                                      <Label text="ЖД Код" />
+                                                      <TextField id="Consignee_RailCode" prefWidth="290.0" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <VBox>
+                                             <children>
+                                                <Label text="ИНН" />
+                                                <TextField id="Consignee_INN" prefWidth="90.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Улица, Дом" />
+                                                <TextField id="Consignee_StreetHouse" />
+                                             </children>
+                                          </VBox>
+                                          <HBox spacing="2.0">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Область" />
+                                                      <TextField id="Consignee_Region" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="Город" />
+                                                      <TextField id="Consignee_City" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="2.0">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Страна" />
+                                                      <TextField id="Consignee_CountryName" prefWidth="250.0" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="индекс" />
+                                                      <TextField id="Consignee_PostalCode" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Код страны" />
+                                                      <TextField id="Consignee_CountryCode" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefWidth="350.0" spacing="2.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="350.0" text="ОТПРАВИТЕЛЬ" textFill="#fc0000">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox spacing="2.0">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Имя" />
+                                                      <TextField id="Consignor_Name" prefWidth="290.0" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefWidth="60.0">
+                                                   <children>
+                                                      <Label text="ЖД Код" />
+                                                      <TextField id="Consignor_RailCode" prefWidth="290.0" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <VBox>
+                                             <children>
+                                                <Label text="ИНН" />
+                                                <TextField id="Consignor_INN" prefWidth="90.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Улица, Дом" />
+                                                <TextField id="Consignor_StreetHouse" />
+                                             </children>
+                                          </VBox>
+                                          <HBox spacing="2.0">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Область" />
+                                                      <TextField id="Consignor_Region" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Label text="Город" />
+                                                      <TextField id="Consignor_City" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="2.0">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Страна" />
+                                                      <TextField id="Consignor_CountryName" fx:id="sellerINN111111" prefWidth="250.0" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="индекс" />
+                                                      <TextField id="Consignor_PostalCode" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox>
+                                                   <children>
+                                                      <Label text="Код страны" />
+                                                      <TextField id="Consignor_CountryCode" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="6.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox spacing="8.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Груз">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView id="RWBGoods" fx:id="rwbGoods" prefHeight="320.0" prefWidth="600.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="8.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Пломбы" />
+                                    <ListView id="RWBSeal" prefHeight="200.0" prefWidth="200.0" />
+                                    <VBox>
+                                       <children>
+                                          <Label text="станции перехода" />
+                                          <ListView id="RWBBorderStation" fx:id="borderstations" prefHeight="100.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets right="8.0" top="12.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox spacing="8.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Перевозчики" />
+                                    <ListView id="SMGS_CARRIERS" prefHeight="210.0" prefWidth="600.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Плательщики - коды" />
+                                    <TextArea id="G20" prefHeight="210.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <VBox spacing="4.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="3 графа" />
+                                    <TextArea id="ConsignorNotice" prefHeight="80.0" />
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="25 графа" />
+                                    <TextArea id="ConsignorOptionNotice" prefHeight="80.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <VBox alignment="TOP_CENTER" prefWidth="210.0" spacing="6.0">
+               <children>
+                  <Button mnemonicParsing="false" prefWidth="200.0" text="Сохранить" />
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

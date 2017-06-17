@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox spacing="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="tnved" alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <TextArea id="description" fx:id="descr" prefHeight="100.0" />
+            <HBox spacing="4.0">
+               <children>
+                  <VBox prefWidth="150.0">
+                     <children>
+                        <Label text="Колличество единиц" />
+                        <TextField fx:id="pcs" alignment="CENTER" />
+                        <TextField fx:id="pcsname" alignment="CENTER" layoutX="10.0" layoutY="27.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="pcscode" alignment="CENTER" layoutX="10.0" layoutY="52.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Места" />
+                        <TextField fx:id="places" alignment="CENTER" />
+                        <TextField fx:id="placesname" layoutX="10.0" layoutY="27.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="placescode" alignment="CENTER" layoutX="10.0" layoutY="52.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="114.0" layoutY="10.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Нетто" />
+                        <TextField fx:id="nett" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Брутто" />
+                        <TextField fx:id="gross" layoutX="10.0" layoutY="52.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="218.0" layoutY="10.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Цена" />
+                        <TextField fx:id="price" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Стоимость" />
+                        <TextField fx:id="amount" layoutX="10.0" layoutY="52.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+repositories {
+    jcenter()
+    maven {
+        url 'http://nexus.gluonhq.com/nexus/content/repositories/releases'
+    }
+      mavenCentral artifactUrls: [
+        'http://jasperreports.sourceforge.net/maven2',
+        'http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/'
+    ]
+}
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+        
+    tasks.withType(Test) {
+       systemProperty "file.encoding", "UTF-8"
+    }
+}
+
+mainClassName = 'com.myfillbill.MyFillBill'
+
+dependencies {
+    compile 'com.gluonhq:particle:1.1.3'
+    compile 'com.gluonhq:particle:1.1.3:javadoc'
+ 
+compile 'com.gluonhq:ignite-spring:1.0.0'
+
+    compile 'net.sf.jasperreports:jasperreports:6.3.1'
+    compile "joda-time:joda-time:2.2"
+    compile "xalan:xalan:2.7.1"
+    compile "org.apache.poi:poi:3.14"
+
+compile 'net.sf.jasperreports:jasperreports:6.3.1:javadoc'
+
+    compile files('libs/jasperreports-functions-6.3.1.jar')
+    compile files('libs/jasperreports-fonts-6.3.1.jar')
+//compile ('net.sf.jasperreports:jasperreports:6.0.3') {
+//  exclude group: 'com.itextpdf'
+//}
+//runtime 'com.itextpdf:itextpdf:5.5.0'
+//runtime 'com.itextpdf:itext-pdfa:5.5.0'
+    
+}
