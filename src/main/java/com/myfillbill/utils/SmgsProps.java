@@ -8,7 +8,7 @@ package com.myfillbill.utils;
 import com.gluonhq.particle.application.ParticleApplication;
 import com.gluonhq.particle.view.View;
 import com.myfillbill.fillbillXML.smgs.FillBillSmgs;
-import com.myfillbill.utils.fields.smgsfields.SmgsCargoFields;
+import com.myfillbill.utils.fields.smgsfields.SmgsItemsFields;
 import com.myfillbill.utils.fields.smgsfields.SmgsConsigneeFields;
 import com.myfillbill.utils.fields.smgsfields.SmgsConsignorFields;
 import com.myfillbill.utils.fields.smgsfields.SmgsHeaderFields;
@@ -27,7 +27,7 @@ public class SmgsProps {
     private SmgsConsigneeFields consignee;
     private SmgsConsignorFields consignor;
     private SmgsHeaderFields header;
-    private SmgsCargoFields cargo;
+    private SmgsItemsFields cargo;
     
      public SmgsProps() {
     }
@@ -46,7 +46,7 @@ public class SmgsProps {
        this.consignee = new SmgsConsigneeFields(smgsView,smgs);
        this.consignor = new SmgsConsignorFields(smgsView,smgs);
        this.header = new SmgsHeaderFields(smgsView,smgs);
-       this.cargo = new SmgsCargoFields(smgsView,smgs);
+       this.cargo = new SmgsItemsFields(smgsView,smgs);
         
     }
     
