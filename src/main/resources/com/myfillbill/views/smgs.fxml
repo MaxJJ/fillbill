@@ -295,7 +295,7 @@
                               <VBox HBox.hgrow="ALWAYS">
                                  <children>
                                     <Label text="Пломбы" />
-                                    <ListView id="RWBSeal" prefHeight="200.0" prefWidth="200.0" />
+                                    <ListView id="RWBSeal" fx:id="sealsListView" prefHeight="200.0" prefWidth="200.0" />
                                     <VBox>
                                        <children>
                                           <Label text="станции перехода" />
@@ -314,7 +314,7 @@
                               <VBox>
                                  <children>
                                     <Label text="Перевозчики" />
-                                    <ListView id="SMGS_CARRIERS" prefHeight="210.0" prefWidth="600.0" />
+                                    <ListView id="SMGS_CARRIERS" fx:id="carriersListViews" prefHeight="210.0" prefWidth="600.0" />
                                  </children>
                               </VBox>
                               <VBox layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">

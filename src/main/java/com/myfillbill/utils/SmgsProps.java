@@ -8,10 +8,10 @@ package com.myfillbill.utils;
 import com.gluonhq.particle.application.ParticleApplication;
 import com.gluonhq.particle.view.View;
 import com.myfillbill.fillbillXML.smgs.FillBillSmgs;
-import com.myfillbill.utils.fields.smgsfields.SmgsItemsFields;
 import com.myfillbill.utils.fields.smgsfields.SmgsConsigneeFields;
 import com.myfillbill.utils.fields.smgsfields.SmgsConsignorFields;
 import com.myfillbill.utils.fields.smgsfields.SmgsHeaderFields;
+import com.myfillbill.utils.fields.smgsfields.SmgsItemsFields;
 
 /**
  *

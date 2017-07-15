@@ -10,7 +10,8 @@ public class MyFillBill extends ParticleApplication {
     
     public MyFillBill() {
         
-        super("Gluon Desktop Application");
+//        super("Gluon Desktop Application");
+        super("FillBill Reader-Writer");
          
         
         

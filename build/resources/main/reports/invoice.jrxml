@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-05-02T19:26:29 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b97bfacb-d2f3-4ae4-94d6-32a7f6ee8914">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="f8188ba0-e1c7-4161-a56d-d7b2f07a901a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+		<queryString language="xPath">
+			<![CDATA[/INVOICE/INVOICE_ITEM/INVOICEGoods/INVOICEGOODS_ITEM]]>
+		</queryString>
+		<field name="GoodsCode" class="java.lang.String">
+			<fieldDescription><![CDATA[GoodsCode]]></fieldDescription>
+		</field>
+		<field name="GoodsDescription" class="java.lang.String">
+			<fieldDescription><![CDATA[GoodsDescription]]></fieldDescription>
+		</field>
+		<field name="PlacesQuantity" class="java.lang.String">
+			<fieldDescription><![CDATA[PlacesQuantity]]></fieldDescription>
+		</field>
+		<field name="PlacesDescription" class="java.lang.String">
+			<fieldDescription><![CDATA[PlacesDescription]]></fieldDescription>
+		</field>
+		<field name="PlacesCode" class="java.lang.String">
+			<fieldDescription><![CDATA[PlacesCode]]></fieldDescription>
+		</field>
+		<field name="GrossWeightQuantity" class="java.lang.String">
+			<fieldDescription><![CDATA[GrossWeightQuantity]]></fieldDescription>
+		</field>
+		<field name="kg" class="java.lang.String">
+			<fieldDescription><![CDATA[kg]]></fieldDescription>
+		</field>
+		<field name="kg2" class="java.lang.String">
+			<fieldDescription><![CDATA[kg2]]></fieldDescription>
+		</field>
+		<field name="NetWeightQuantity" class="java.lang.String">
+			<fieldDescription><![CDATA[NetWeightQuantity]]></fieldDescription>
+		</field>
+		<field name="Price" class="java.lang.String">
+			<fieldDescription><![CDATA[Price]]></fieldDescription>
+		</field>
+		<field name="TotalCost" class="java.lang.String">
+			<fieldDescription><![CDATA[TotalCost]]></fieldDescription>
+		</field>
+		<field name="GoodsQuantity" class="java.lang.String">
+			<fieldDescription><![CDATA[GoodsQuantity]]></fieldDescription>
+		</field>
+		<field name="MeasureUnitQualifierName" class="java.lang.String">
+			<fieldDescription><![CDATA[MeasureUnitQualifierName]]></fieldDescription>
+		</field>
+		<field name="MeasureUnitQualifierCode" class="java.lang.String">
+			<fieldDescription><![CDATA[MeasureUnitQualifierCode]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="XPath">
+		<![CDATA[/INVOICE/INVOICE_ITEM]]>
+	</queryString>
+	<field name="Hide" class="java.lang.String">
+		<fieldDescription><![CDATA[Hide]]></fieldDescription>
+	</field>
+	<field name="pi" class="java.lang.String">
+		<fieldDescription><![CDATA[pi]]></fieldDescription>
+	</field>
+	<field name="ETD" class="java.lang.String">
+		<fieldDescription><![CDATA[ETD]]></fieldDescription>
+	</field>
+	<field name="SupplementaryQualifierName" class="java.lang.String">
+		<fieldDescription><![CDATA[SupplementaryQualifierName]]></fieldDescription>
+	</field>
+	<field name="MeasureUnitQualifierFullName" class="java.lang.String">
+		<fieldDescription><![CDATA[MeasureUnitQualifierFullName]]></fieldDescription>
+	</field>
+	<field name="MeasureUnitQualifierName" class="java.lang.String">
+		<fieldDescription><![CDATA[MeasureUnitQualifierName]]></fieldDescription>
+	</field>
+	<field name="MeasureUnitQualifierCode" class="java.lang.String">
+		<fieldDescription><![CDATA[MeasureUnitQualifierCode]]></fieldDescription>
+	</field>
+	<field name="SMGS" class="java.lang.String">
+		<fieldDescription><![CDATA[SMGS]]></fieldDescription>
+	</field>
+	<field name="CurrencyCode" class="java.lang.String">
+		<fieldDescription><![CDATA[CurrencyCode]]></fieldDescription>
+	</field>
+	<field name="GrossWeightQuantity" class="java.lang.String">
+		<fieldDescription><![CDATA[GrossWeightQuantity]]></fieldDescription>
+	</field>
+	<field name="NetWeightQuantity" class="java.lang.String">
+		<fieldDescription><![CDATA[NetWeightQuantity]]></fieldDescription>
+	</field>
+	<field name="GCost" class="java.lang.String">
+		<fieldDescription><![CDATA[GCost]]></fieldDescription>
+	</field>
+	<field name="OtherChargesName" class="java.lang.String">
+		<fieldDescription><![CDATA[OtherChargesName]]></fieldDescription>
+	</field>
+	<field name="TotalCost" class="java.lang.String">
+		<fieldDescription><![CDATA[TotalCost]]></fieldDescription>
+	</field>
+	<field name="TotalSign" class="java.lang.String">
+		<fieldDescription><![CDATA[TotalSign]]></fieldDescription>
+	</field>
+	<field name="Buyer_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_Name]]></fieldDescription>
+	</field>
+	<field name="Buyer_PostalCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_PostalCode]]></fieldDescription>
+	</field>
+	<field name="Buyer_CountryCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_CountryCode]]></fieldDescription>
+	</field>
+	<field name="Buyer_CountryName" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_CountryName]]></fieldDescription>
+	</field>
+	<field name="Buyer_City" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_City]]></fieldDescription>
+	</field>
+	<field name="Buyer_StreetHouse" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_StreetHouse]]></fieldDescription>
+	</field>
+	<field name="Seler_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[Seler_Name]]></fieldDescription>
+	</field>
+	<field name="Seler_PostalCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Seler_PostalCode]]></fieldDescription>
+	</field>
+	<field name="Seler_CountryCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Seler_CountryCode]]></fieldDescription>
+	</field>
+	<field name="Seler_CountryName" class="java.lang.String">
+		<fieldDescription><![CDATA[Seler_CountryName]]></fieldDescription>
+	</field>
+	<field name="Seler_City" class="java.lang.String">
+		<fieldDescription><![CDATA[Seler_City]]></fieldDescription>
+	</field>
+	<field name="Seler_StreetHouse" class="java.lang.String">
+		<fieldDescription><![CDATA[Seler_StreetHouse]]></fieldDescription>
+	</field>
+	<field name="Consignor_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignor_Name]]></fieldDescription>
+	</field>
+	<field name="Consignor_PostalCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignor_PostalCode]]></fieldDescription>
+	</field>
+	<field name="Consignor_CountryCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignor_CountryCode]]></fieldDescription>
+	</field>
+	<field name="Consignor_CountryName" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignor_CountryName]]></fieldDescription>
+	</field>
+	<field name="Consignor_City" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignor_City]]></fieldDescription>
+	</field>
+	<field name="Consignor_StreetHouse" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignor_StreetHouse]]></fieldDescription>
+	</field>
+	<field name="Consignee_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignee_Name]]></fieldDescription>
+	</field>
+	<field name="Consignee_PostalCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignee_PostalCode]]></fieldDescription>
+	</field>
+	<field name="Consignee_CountryCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignee_CountryCode]]></fieldDescription>
+	</field>
+	<field name="Consignee_CountryName" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignee_CountryName]]></fieldDescription>
+	</field>
+	<field name="Consignee_City" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignee_City]]></fieldDescription>
+	</field>
+	<field name="Consignee_StreetHouse" class="java.lang.String">
+		<fieldDescription><![CDATA[Consignee_StreetHouse]]></fieldDescription>
+	</field>
+	<field name="DeliveryPlace" class="java.lang.String">
+		<fieldDescription><![CDATA[DeliveryPlace]]></fieldDescription>
+	</field>
+	<field name="DeliveryTermsStringCode" class="java.lang.String">
+		<fieldDescription><![CDATA[DeliveryTermsStringCode]]></fieldDescription>
+	</field>
+	<field name="DispatchCountryCode" class="java.lang.String">
+		<fieldDescription><![CDATA[DispatchCountryCode]]></fieldDescription>
+	</field>
+	<field name="DispatchCountryName" class="java.lang.String">
+		<fieldDescription><![CDATA[DispatchCountryName]]></fieldDescription>
+	</field>
+	<field name="DestinationCountryCode" class="java.lang.String">
+		<fieldDescription><![CDATA[DestinationCountryCode]]></fieldDescription>
+	</field>
+	<field name="DestinationCountryName" class="java.lang.String">
+		<fieldDescription><![CDATA[DestinationCountryName]]></fieldDescription>
+	</field>
+	<field name="DeadLine" class="java.lang.String">
+		<fieldDescription><![CDATA[DeadLine]]></fieldDescription>
+	</field>
+	<field name="DeadLineTime" class="java.lang.String">
+		<fieldDescription><![CDATA[DeadLineTime]]></fieldDescription>
+	</field>
+	<field name="InvoiceName" class="java.lang.String">
+		<fieldDescription><![CDATA[InvoiceName]]></fieldDescription>
+	</field>
+	<field name="RegNum" class="java.lang.String">
+		<fieldDescription><![CDATA[RegNum]]></fieldDescription>
+	</field>
+	<field name="RegDate" class="java.lang.String">
+		<fieldDescription><![CDATA[RegDate]]></fieldDescription>
+	</field>
+	<field name="DopData2" class="java.lang.String">
+		<fieldDescription><![CDATA[DopData2]]></fieldDescription>
+	</field>
+	<field name="ContractNum" class="java.lang.String">
+		<fieldDescription><![CDATA[ContractNum]]></fieldDescription>
+	</field>
+	<field name="PlacesQuantity" class="java.lang.String">
+		<fieldDescription><![CDATA[PlacesQuantity]]></fieldDescription>
+	</field>
+	<field name="CarriageId" class="java.lang.String">
+		<fieldDescription><![CDATA[Carriage/CARRIAGE_ITEM/CarriageId]]></fieldDescription>
+	</field>
+	<field name="ContainerID" class="java.lang.String">
+		<fieldDescription><![CDATA[Container/CONTAINER_ITEM/ContainerID]]></fieldDescription>
+	</field>
+	<field name="Buyer_INN" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_INN]]></fieldDescription>
+	</field>
+	<field name="Buyer_Name_1" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_Name]]></fieldDescription>
+	</field>
+	<field name="Buyer_Phone" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_Phone]]></fieldDescription>
+	</field>
+	<field name="Buyer_Region" class="java.lang.String">
+		<fieldDescription><![CDATA[Buyer_Region]]></fieldDescription>
+	</field>
+	<field name="INVOICEGoods" class="java.lang.String">
+		<fieldDescription><![CDATA[INVOICEGoods]]></fieldDescription>
+	</field>
+	<field name="GoodsDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[INVOICEGoods/INVOICEGOODS_ITEM/GoodsDescription]]></fieldDescription>
+	</field>
+	<field name="PlacesDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[INVOICEGoods/INVOICEGOODS_ITEM/PlacesDescription]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="58" splitType="Stretch">
+			<image>
+				<reportElement x="-2" y="8" width="50" height="50" uuid="490da42e-cbc1-492f-be59-ab97292eb05f"/>
+			</image>
+			<staticText>
+				<reportElement x="307" y="0" width="232" height="58" uuid="d148992f-2c1d-4817-bad6-a4e95561ba90"/>
+				<text><![CDATA[RAILWAY LOGISTICS SERVICE SIA
+REĢ.NR.40003907460
+GAUJAS 11-302,RĪGA,LV-1026,LATVIJA
+TEL.: +371 67367701, 66002598
+FAX : +371 67367706, 66002750, email: rls@railway.lv]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="139">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<frame>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="20" uuid="b93eef03-b17a-46f6-b5de-bc8504a6a1c2">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+				</box>
+				<textField>
+					<reportElement positionType="Float" x="0" y="0" width="185" height="20" uuid="37fef85e-cdd7-4bb4-958a-1ff51f551220">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.layout.grid.x" value="0"/>
+						<property name="com.jaspersoft.layout.grid.y" value="0"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					</reportElement>
+					<box topPadding="1" bottomPadding="0"/>
+					<textFieldExpression><![CDATA[$F{InvoiceName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="Float" x="185" y="0" width="185" height="20" uuid="5da1d906-d026-4fce-acd5-8b55984af4ed">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.layout.grid.x" value="1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="0"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					</reportElement>
+					<box topPadding="1" bottomPadding="1"/>
+					<textFieldExpression><![CDATA[$F{RegNum}]]></textFieldExpression>
+				</textField>
+				<textField pattern="">
+					<reportElement positionType="Float" x="370" y="0" width="185" height="20" uuid="3d95cf57-34dd-47bf-ac14-f89e77116237">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.layout.grid.x" value="2"/>
+						<property name="com.jaspersoft.layout.grid.y" value="0"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<box topPadding="1" bottomPadding="1"/>
+					<textElement>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format(new SimpleDateFormat("yyyy-MM-dd").parse($F{RegDate}))]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="77" width="555" height="62" uuid="a88320b3-b452-4340-a8ed-c1ea2695653a">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="0" width="185" height="62" uuid="9ad73685-a3b7-45e3-a519-0d28d16f1150">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="0" y="0" width="185" height="17" uuid="706079ec-c0ae-4460-83b0-4589b1662401"/>
+						<text><![CDATA[Продавец]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="0" y="17" width="185" height="15" uuid="cab91d1a-5321-48b9-a6f9-88b40fca6100"/>
+						<textElement>
+							<font size="8" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{Seler_Name}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="0" y="32" width="185" height="15" uuid="d5fddbcb-dcac-4a50-a99b-2480565bfffb"/>
+						<textElement>
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{Seler_StreetHouse}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="0" y="47" width="185" height="15" uuid="b7181434-42b4-4ed7-aed3-8b82df6ba916"/>
+						<textElement>
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[CONCATENATE($F{Seler_City},", ",$F{Seler_PostalCode},", ",$F{Seler_CountryName})]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="185" y="0" width="185" height="62" uuid="bfd6fdd9-9cda-416d-b9d0-f3bd42f77c8d">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="0" y="0" width="185" height="17" uuid="8d692a6c-c119-4c9f-9666-1eb56f3c26f5"/>
+						<text><![CDATA[Покупатель]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="17" width="185" height="15" uuid="8923d209-7a1a-4a88-af4d-719bfc25987a"/>
+						<textElement>
+							<font size="8" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{Buyer_Name}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="32" width="185" height="15" uuid="698dd057-a22e-4107-a32d-2e03de690c30"/>
+						<textElement>
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[CONCATENATE($F{Buyer_StreetHouse}," ",(java.lang.String)IF(EQUALS($F{Buyer_Region},null),"",$F{Buyer_Region}))]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement stretchType="RelativeToTallestObject" x="0" y="47" width="185" height="15" uuid="b3216b94-e0a8-49d2-a215-451fba3b2fe3"/>
+						<textElement>
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[CONCATENATE($F{Buyer_City},", ",$F{Buyer_CountryName}," ",(java.lang.String)IF(EQUALS($F{Buyer_PostalCode},null),"",$F{Buyer_PostalCode}))]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="370" y="0" width="185" height="62" uuid="b6c3a0bc-75a1-46cf-9227-6720bc2c1919">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					</reportElement>
+					<staticText>
+						<reportElement x="0" y="0" width="185" height="62" uuid="1adae70d-eb49-4986-9c29-ef1177d4d999"/>
+						<text><![CDATA[Грузополучатель]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="30" width="554" height="40" uuid="b92c0896-b2ff-4bac-9ad3-17d7c5dec1c5">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement positionType="Float" x="0" y="0" width="178" height="40" uuid="b33f959d-675f-4630-b423-71dc5077b288">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2"/>
+					<staticText>
+						<reportElement x="0" y="0" width="174" height="14" uuid="f4054887-f0bf-45e4-a435-f41354f51e9f">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						</reportElement>
+						<text><![CDATA[Отправитель]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="0" y="14" width="174" height="13" uuid="06ee286b-7436-43b5-ad54-66d2ca5c7636"/>
+						<textFieldExpression><![CDATA[$F{Consignor_Name}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="0" y="27" width="174" height="13" uuid="0112cdbe-ef3b-4216-a6d0-0b146a6bf17f"/>
+						<textFieldExpression><![CDATA[CONCATENATE($F{Consignor_StreetHouse},", ",$F{Consignor_City},", ",$F{Consignor_CountryName}," ",$F{Consignor_PostalCode})]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="186" y="0" width="164" height="39" uuid="707ca296-3f02-43ca-a0d1-ec2ea6c6bc3c">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2"/>
+					<staticText>
+						<reportElement x="0" y="0" width="80" height="13" uuid="bb40672b-aaf7-44c4-bd78-258219481e2b">
+							<property name="com.jaspersoft.layout.grid.x" value="0"/>
+							<property name="com.jaspersoft.layout.grid.y" value="0"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<text><![CDATA[Накладная СМГС № : ]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="80" y="0" width="80" height="13" uuid="61b653e3-7d62-4759-bc60-160e94e40695">
+							<property name="com.jaspersoft.layout.grid.x" value="1"/>
+							<property name="com.jaspersoft.layout.grid.y" value="0"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<textFieldExpression><![CDATA[$F{SMGS}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="0" y="13" width="80" height="13" uuid="6658a318-48d1-4ec2-9117-3ddb464704ed">
+							<property name="com.jaspersoft.layout.grid.x" value="0"/>
+							<property name="com.jaspersoft.layout.grid.y" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<text><![CDATA[Вагон :]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="80" y="13" width="80" height="13" uuid="aa115fe9-0fd7-42f9-b62d-dcc2c333db4b"/>
+						<textFieldExpression><![CDATA[$F{CarriageId}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="0" y="26" width="80" height="13" uuid="4ea0c1d9-4bf5-4aa9-ba04-63fe62f8f334">
+							<property name="com.jaspersoft.layout.grid.x" value="0"/>
+							<property name="com.jaspersoft.layout.grid.y" value="2"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<text><![CDATA[Контейнер: ]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="80" y="26" width="80" height="13" uuid="5349e8bf-73e0-49a9-a35d-d4beab3a7783"/>
+						<textFieldExpression><![CDATA[$F{ContainerID}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="370" y="0" width="156" height="39" uuid="f2713a54-80cc-49b2-b990-015d550e9b29">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2"/>
+					<staticText>
+						<reportElement x="0" y="0" width="76" height="13" uuid="56ebe5b6-3f1e-4aef-8902-64916a5d186c">
+							<property name="com.jaspersoft.layout.grid.x" value="0"/>
+							<property name="com.jaspersoft.layout.grid.y" value="0"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<text><![CDATA[Контракт ]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="76" y="0" width="76" height="13" uuid="752b922b-4d7f-4942-8b87-0eac6be43cf1">
+							<property name="com.jaspersoft.layout.grid.x" value="1"/>
+							<property name="com.jaspersoft.layout.grid.y" value="0"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<textFieldExpression><![CDATA[$F{ContractNum}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="0" y="13" width="76" height="13" uuid="b71a1da2-a45a-4e61-8d94-69908fba2ae5">
+							<property name="com.jaspersoft.layout.grid.x" value="0"/>
+							<property name="com.jaspersoft.layout.grid.y" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<text><![CDATA[Условия поставки ]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="76" y="13" width="76" height="13" uuid="48e20dca-7701-4980-82be-2dcd6b4fd42b"/>
+						<textFieldExpression><![CDATA[CONCATENATE($F{DeliveryTermsStringCode},"  ",$F{DeliveryPlace})]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="0" y="26" width="76" height="13" uuid="a6a68aac-a7fe-4598-ac68-0d0edf33ad9c">
+							<property name="com.jaspersoft.layout.grid.x" value="0"/>
+							<property name="com.jaspersoft.layout.grid.y" value="2"/>
+							<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+							<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+							<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						</reportElement>
+						<text><![CDATA[Валюта платежа]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="76" y="26" width="76" height="13" uuid="f12a5c98-58fe-4548-bb33-532224473b96"/>
+						<textFieldExpression><![CDATA[$F{CurrencyCode}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+		<band height="258" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<componentElement>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="129" uuid="09817a74-fd70-44ee-bc9b-4a99225a8cd1">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Dataset1" uuid="3c93f116-58ef-41a4-8a51-9fe9f86e7137">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/INVOICE_ITEM/INVOICEGoods/INVOICEGOODS_ITEM")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="129" width="555">
+						<textField>
+							<reportElement x="0" y="0" width="92" height="30" uuid="4c0a66f6-2040-4031-ae70-588cfab7887e"/>
+							<textElement>
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{GoodsDescription}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="92" y="0" width="92" height="30" uuid="83b9a052-7fd7-4307-85d0-62ae9be24d27"/>
+							<textFieldExpression><![CDATA[$F{GoodsCode}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="184" y="0" width="92" height="30" uuid="8934f2fb-77ff-4643-ae58-1cf748ec2df5"/>
+							<textFieldExpression><![CDATA[$F{GoodsQuantity}]]></textFieldExpression>
+						</textField>
+						<frame>
+							<reportElement x="276" y="0" width="92" height="30" uuid="058c44ca-562a-47b3-a329-73a3dce3df9c">
+								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+							</reportElement>
+							<textField>
+								<reportElement x="0" y="0" width="92" height="15" uuid="ee549a6f-826b-416a-91fb-08bafd49dffe"/>
+								<textFieldExpression><![CDATA[$F{PlacesQuantity}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="0" y="15" width="92" height="15" uuid="1d385957-1345-49f5-b267-45571f4fd2c8"/>
+								<textFieldExpression><![CDATA[(java.lang.String)IF( EQUALS($F{PlacesCode},"BX"),"коробка", (java.lang.String)IF( EQUALS($F{PlacesCode},"NE"),"не упаковано",""))]]></textFieldExpression>
+							</textField>
+						</frame>
+						<textField>
+							<reportElement x="368" y="0" width="92" height="30" uuid="615c88d9-5bc9-444a-9317-c2e859e105c5"/>
+							<textFieldExpression><![CDATA[$F{NetWeightQuantity}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="460" y="0" width="92" height="30" uuid="114e0507-a18a-4247-aa44-74a25b6981ce"/>
+							<textFieldExpression><![CDATA[$F{GrossWeightQuantity}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="0" y="129" width="555" height="129" uuid="a7142580-cb76-432a-b14c-2aa569fbc618">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="238bfdac-9932-4698-8eff-85e3eb501606">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/INVOICE_ITEM/INVOICEGoods/INVOICEGOODS_ITEM")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="ed47ad53-5cc6-4e3a-a475-19f038382bce">
+						<jr:tableHeader style="Table 1_TH" height="30"/>
+						<jr:tableFooter style="Table 1_TH" height="30"/>
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="37478f9a-c992-426d-a8d1-192c63b8421f"/>
+								<text><![CDATA[Описание]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30"/>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="7474bede-2361-4237-affd-c2af9f26b01d"/>
+								<textFieldExpression><![CDATA[$F{GoodsDescription}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

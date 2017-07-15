@@ -3,10 +3,15 @@ package com.myfillbill.controllers;
 import com.gluonhq.particle.application.ParticleApplication;
 import com.gluonhq.particle.view.ViewManager;
 import com.myfillbill.fillbillXML.smgs.FillBillSmgs;
+import com.myfillbill.fillbillXML.smgs.RWBBORDERSTATION_ITEM;
 import com.myfillbill.fillbillXML.smgs.RWBGOODS_ITEM;
+import com.myfillbill.fillbillXML.smgs.RWBSEAL_ITEM;
+import com.myfillbill.fillbillXML.smgs.SMGS_CARRIERS_ITEM;
 import com.myfillbill.utils.Services;
 import com.myfillbill.utils.SmgsProps;
+import com.myfillbill.views.listCellViews.BorderStationListCell;
 import com.myfillbill.views.listCellViews.RwbGoodsListCell;
+import com.myfillbill.views.listCellViews.RwbSealsListCell;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,6 +42,14 @@ private  SmgsProps props;
     
      @FXML
     private ListView<RWBGOODS_ITEM> rwbGoods;
+      @FXML
+    private ListView<RWBSEAL_ITEM> sealsListView;
+
+    @FXML
+    private ListView<RWBBORDERSTATION_ITEM> borderstations;
+
+    @FXML
+    private ListView<SMGS_CARRIERS_ITEM> carriersListViews;
     
     @FXML
     private ResourceBundle resources;
@@ -79,13 +92,16 @@ this.get = new Services(app);
 
     private void initSmgsViewFields() {
        setCargoListView();
-        
+       setSealsListView();
+       
+      setCarriersListView();
+      setBoarderStListView();  
         
     }
 
     private void setCargoListView() {
        
-            rwbGoods.setCellFactory((ListView<RWBGOODS_ITEM> param) -> new RwbGoodsListCell());
+            rwbGoods.setCellFactory((ListView<RWBGOODS_ITEM> param) -> new RwbGoodsListCell() );
       rwbGoods.setOnMouseClicked((MouseEvent event) -> {
           if(event.getClickCount()==2){
               
@@ -98,6 +114,31 @@ this.get = new Services(app);
           } 
        });
     }
+
+    private void setSealsListView() {
+             sealsListView.setCellFactory((ListView<RWBSEAL_ITEM> param) -> new RwbSealsListCell());
+      sealsListView.setOnMouseClicked((MouseEvent event) -> {
+          if(event.getClickCount()==2){
+              
+             
+       } 
+        
+          });
+      }
+
+    private void setCarriersListView() {
+        
+    }
+
+    private void setBoarderStListView() {
+       
+        borderstations.setCellFactory(param -> new BorderStationListCell());
+        
+        
+    }
+    
+    
+    
               }
     
     

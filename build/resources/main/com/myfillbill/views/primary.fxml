@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="primary" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myfillbill.controllers.PrimaryController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefWidth="300.0" spacing="6.0">
+               <children>
+                  <Button fx:id="readInvoice" mnemonicParsing="false" prefWidth="200.0" text="Button" />
+                  <Button fx:id="checkInvoice" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" prefWidth="200.0" text="Button" />
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+            <ScrollPane hmin="10.0" pannable="true">
+               <content>
+                  <VBox alignment="CENTER" prefWidth="1200.0" spacing="8.0">
+                     <children>
+                        <Label fx:id="label" text="Welcome!" />
+                        <Button fx:id="button" mnemonicParsing="false" text="%button.text" />
+                        <FlowPane alignment="CENTER" prefWrapLength="1200.0">
+                           <children>
+                              <HBox minHeight="45.0" minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" spacing="4.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Документ" />
+                                          <TextField id="InvoiceName" minWidth="230.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Номер" />
+                                          <TextField id="RegNum" minWidth="100.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="256.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Дата" />
+                                          <TextField id="RegDate" minWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox minHeight="45.0" minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" spacing="4.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Incoterms" />
+                                          <TextField id="DeliveryTermsStringCode" minWidth="100.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Место" />
+                                          <TextField id="DeliveryPlace" minWidth="100.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="256.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Контракт" />
+                                          <TextField id="ContractNum" minWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="230.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Валюта платежа" />
+                                          <TextField id="CurrencyCode" minWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="60.0" minHeight="45.0" minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" spacing="4.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="СМГС" />
+                                          <TextField id="SMGS" minWidth="100.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Вагон" />
+                                          <TextField id="CarriageId" minWidth="100.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="256.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label text="Контейнер" />
+                                          <TextField id="ContainerID" minWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" hgap="5.0" prefWrapLength="290.0" vgap="5.0">
+                           <children>
+                              <VBox layoutX="463.0" layoutY="10.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="290.0" text="ОТПРАВИТЕЛЬ" textFill="#fc0000">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Имя" />
+                                    <TextField id="Consignor_Name" fx:id="sellerName11" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="27.0" text="ИНН" />
+                                    <TextField id="Consignor_INN" fx:id="sellerINN11" layoutX="10.0" layoutY="44.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="69.0" text="Улица, Дом" />
+                                    <TextField id="Consignor_StreetHouse" fx:id="sellerINN111" layoutX="10.0" layoutY="86.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="111.0" text="Область" />
+                                    <TextField id="Consignor_Region" fx:id="sellerINN1111" layoutX="10.0" layoutY="128.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="153.0" text="Город" />
+                                    <TextField id="Consignor_City" fx:id="sellerINN11111" layoutX="10.0" layoutY="170.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="195.0" text="Страна" />
+                                    <TextField id="Consignor_CountryName" fx:id="sellerINN111111" layoutX="10.0" layoutY="212.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Почтовый индекс" />
+                                    <TextField id="Consignor_PostalCode" fx:id="sellerINN1111211" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Код страны" />
+                                    <TextField id="Consignor_CountryCode" fx:id="sellerINN1111111" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="290.0" text="ПРОДАВЕЦ" textFill="#fc0000">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Имя" />
+                                    <TextField id="Seler_Name" fx:id="sellerName" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="27.0" text="ИНН" />
+                                    <TextField id="Seler_INN" fx:id="sellerINN" layoutX="10.0" layoutY="44.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="69.0" text="Улица, Дом" />
+                                    <TextField id="Seler_StreetHouse" fx:id="sellerINN1" layoutX="10.0" layoutY="86.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="111.0" text="Область" />
+                                    <TextField id="Seler_Region" fx:id="sellerINN11" layoutX="10.0" layoutY="128.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="153.0" text="Город" />
+                                    <TextField id="Seler_City" fx:id="sellerINN111" layoutX="10.0" layoutY="170.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="195.0" text="Страна" />
+                                    <TextField id="Seler_CountryName" fx:id="sellerINN1111" layoutX="10.0" layoutY="212.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Почтовый индекс" />
+                                    <TextField id="Seler_PostalCode" fx:id="sellerINN11112" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Код страны" />
+                                    <TextField id="Seler_CountryCode" fx:id="sellerINN11111" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="165.0" layoutY="10.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="290.0" text="ПОЛУЧАТЕЛЬ" textFill="#fc0000">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Имя" />
+                                    <TextField id="Consignee_Name" fx:id="sellerName1" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="27.0" text="ИНН" />
+                                    <TextField id="Consignee_INN" fx:id="sellerINN1" layoutX="10.0" layoutY="44.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="69.0" text="Улица, Дом" />
+                                    <TextField id="Consignee_StreetHouse" fx:id="sellerINN11" layoutX="10.0" layoutY="86.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="111.0" text="Область" />
+                                    <TextField id="Consignee_Region" fx:id="sellerINN111" layoutX="10.0" layoutY="128.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="153.0" text="Город" />
+                                    <TextField id="Consignee_City" fx:id="sellerINN1111" layoutX="10.0" layoutY="170.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="195.0" text="Страна" />
+                                    <TextField id="Consignee_CountryName" fx:id="sellerINN11111" layoutX="10.0" layoutY="212.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Почтовый индекс" />
+                                    <TextField id="Consignee_PostalCode" fx:id="sellerINN111121" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Код страны" />
+                                    <TextField id="Consignee_CountryCode" fx:id="sellerINN111111" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="760.0" layoutY="10.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="290.0" text="ПОКУПАТЕЛЬ" textFill="#fc0000">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Имя" />
+                                    <TextField id="Buyer_Name" fx:id="sellerName111" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="27.0" text="ИНН" />
+                                    <TextField id="Buyer_INN" fx:id="sellerINN111" layoutX="10.0" layoutY="44.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="69.0" text="Улица, Дом" />
+                                    <TextField id="Buyer_StreetHouse" fx:id="sellerINN1111" layoutX="10.0" layoutY="86.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="111.0" text="Область" />
+                                    <TextField id="Buyer_Region" fx:id="sellerINN11111" layoutX="10.0" layoutY="128.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="153.0" text="Город" />
+                                    <TextField id="Buyer_City" fx:id="sellerINN111111" layoutX="10.0" layoutY="170.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="195.0" text="Страна" />
+                                    <TextField id="Buyer_CountryName" fx:id="sellerINN1111111" layoutX="10.0" layoutY="212.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Почтовый индекс" />
+                                    <TextField id="Buyer_PostalCode" fx:id="sellerINN11112111" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                    <Label layoutX="10.0" layoutY="237.0" text="Код страны" />
+                                    <TextField id="Buyer_CountryCode" fx:id="sellerINN11111111" layoutX="10.0" layoutY="254.0" prefWidth="290.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </FlowPane>
+                        <ListView id="goodsList" fx:id="goodsList">
+                           <VBox.margin>
+                              <Insets left="12.0" right="12.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <VBox alignment="TOP_CENTER" prefWidth="300.0" spacing="6.0">
+               <children>
+                  <Button fx:id="save" mnemonicParsing="false" prefWidth="200.0" text="Сохранить" />
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
